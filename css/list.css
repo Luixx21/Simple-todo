@@ -1,0 +1,10 @@
+#task-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px
+}
+@media (max-width: 800px) {
+    #task-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8>
+        <meta viewport="width=device-width,minimun-scale=1,initial-scale=1">
+        <link rel="stylesheet" href="./css/styles.css">
+
+        <title>Todo List</title>
+    </head>
+    <body>
+        <header>
+            <h1>Todo list</h1>
+        </header>
+        <main>
+            
+            <h2>Recently list</h2>
+            <div>
+                <span>Your task list</span>
+                <div id="task-list"></div>
+            </div>
+
+            <fieldset>
+                <legend>
+                    Add new tasks here!
+                </legend>
+                <label for="task-title">
+                    Title
+                    <input id="task-title">
+                </label>
+                <label for="task-notes">
+                    Notes
+                    <input id="task-notes">
+                </label>
+                <label for="task-deadline">
+                    Deadline
+                    <input type=date id="task-deadline">
+                </label>
+            </fieldset>
+            <div class="options">
+                <button id=add-task class="sucess">Add task</button>
+                <button id=upload-json class="sucess">Upload file structure</button>
+                <button id=download-todo class="sucess">Download todo</button>
+            </div>
+            <label>
+                Todo structure<br>
+                <textarea id=structure-input></textarea>
+            </label>
+        </main>
+        <script src=./js/index.js></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    </body>
+</html>
