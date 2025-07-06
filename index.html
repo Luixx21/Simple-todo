@@ -11,13 +11,9 @@
         <header>
             <h1>Todo list</h1>
         </header>
-        <main>
-            
+        <main>            
             <h2>Recently list</h2>
-            <div>
-                <span>Your task list</span>
-                <div id="task-list"></div>
-            </div>
+            <div id="task-list"></div>
 
             <fieldset>
                 <legend>
@@ -38,12 +34,15 @@
             </fieldset>
             <div class="options">
                 <button id=add-task class="sucess">Add task</button>
+                <label for="file-uploaded" >
+                    <input type="file" id="file-uploaded" accept=".json" class="sucess">
+                </label>
                 <button id=upload-json class="sucess">Upload file structure</button>
                 <button id=download-todo class="sucess">Download todo</button>
             </div>
             <label>
                 Todo structure<br>
-                <textarea id=structure-input></textarea>
+                <textarea id="structure-input"></textarea>
             </label>
         </main>
         <script src=./js/index.js></script>

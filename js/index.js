@@ -128,6 +128,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.getElementById("upload-json").addEventListener("click", () => {
+        var file = document.getElementById("file-uploaded").files[0];        
+
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = async () => {
+                const text = await reader.result;
+                document.getElementById("structure-input").innerText = text;
+            }
+            reader.onerror = () => console.error("Erro ao ler o arquivo:", reader.error);
+            reader.readAsText(file);
+        }
+
         uploadJson();
     });
 
